@@ -194,8 +194,124 @@ using TUIO;
 		public void refresh(TuioTime frameTime) {
 			Invalidate();
 		}
+		void clears1()
+	    {
+		//sorax=0;
+		//soray = 0;
+		//sora1x = 0;
+		//sora1y = 0;
+		sora2x = 0;
+		sora2y = 0;
+		sora22x = 0;
+		sora22y = 0;
+		sora3x = 0;
+		sora3y = 0;
+		sora33x = 0;
+		sora33y = 0;
+		sora4x = 0;
+		sora4y = 0;
+		sora44x = 0;
+		sora44y = 0;
+		sora5x = 0;
+		sora5y = 0;
+		sora55x = 0;
+		sora55y = 0;
+   	    }
+		void clears2()
+	{
+		sorax=0;
+		soray = 0;
+		sora1x = 0;
+		sora1y = 0;
+		//sora2x = 0;
+		//sora2y = 0;
+		//sora22x = 0;
+		//sora22y = 0;
+		sora3x = 0;
+		sora3y = 0;
+		sora33x = 0;
+		sora33y = 0;
+		sora4x = 0;
+		sora4y = 0;
+		sora44x = 0;
+		sora44y = 0;
+		sora5x = 0;
+		sora5y = 0;
+		sora55x = 0;
+		sora55y = 0;
+	}
+		void clears3()
+	{
+		sorax = 0;
+		soray = 0;
+		sora1x = 0;
+		sora1y = 0;
+		sora2x = 0;
+		sora2y = 0;
+		sora22x = 0;
+		sora22y = 0;
+		//sora3x = 0;
+		//sora3y = 0;
+		//sora33x = 0;
+		//sora33y = 0;
+		sora4x = 0;
+		sora4y = 0;
+		sora44x = 0;
+		sora44y = 0;
+		sora5x = 0;
+		sora5y = 0;
+		sora55x = 0;
+		sora55y = 0;
+	}
+		void clears4()
+	{
+		sorax = 0;
+		soray = 0;
+		sora1x = 0;
+		sora1y = 0;
+		sora2x = 0;
+		sora2y = 0;
+		sora22x = 0;
+		sora22y = 0;
+		sora3x = 0;
+		sora3y = 0;
+		sora33x = 0;
+		sora33y = 0;
+		//sora4x = 0;
+		//sora4y = 0;
+		//sora44x = 0;
+		//sora44y = 0;
+		sora5x = 0;
+		sora5y = 0;
+		sora55x = 0;
+		sora55y = 0;
+	}
+		void clears5()
+	{
+		sorax = 0;
+		soray = 0;
+		sora1x = 0;
+		sora1y = 0;
+		sora2x = 0;
+		sora2y = 0;
+		sora22x = 0;
+		sora22y = 0;
+		sora3x = 0;
+		sora3y = 0;
+		sora33x = 0;
+		sora33y = 0;
+		sora4x = 0;
+		sora4y = 0;
+		sora44x = 0;
+		sora44y = 0;
+		//sora5x = 0;
+		//sora5y = 0;
+		//sora55x = 0;
+		//sora55y = 0;
+	}
 
-		protected override void OnPaintBackground(PaintEventArgs pevent)
+
+	protected override void OnPaintBackground(PaintEventArgs pevent)
 		{
 		// Getting the graphics object
 		Graphics g = pevent.Graphics;
@@ -235,6 +351,7 @@ using TUIO;
 				{
 					foreach (TuioObject tobj in objectList.Values)
 					{
+					
 						int ox = tobj.getScreenX(width);
 						int oy = tobj.getScreenY(height);
 						//int x = ox;
@@ -242,6 +359,7 @@ using TUIO;
 						int size = height / 40;
 						if (tobj.SymbolID == 1)
 					{
+						clears1();
 						g.TranslateTransform(ox, oy);
 						g.RotateTransform((float)(tobj.Angle / Math.PI * 180.0f));
 						g.TranslateTransform(-ox, -oy);
@@ -260,6 +378,7 @@ using TUIO;
 					}
 						else if (tobj.SymbolID == 2)
 					{
+						clears1();
 						g.TranslateTransform(ox, oy);
 						g.RotateTransform((float)(tobj.Angle / Math.PI * 180.0f));
 						g.TranslateTransform(-ox, -oy);
@@ -288,6 +407,7 @@ using TUIO;
 					}
 						else if(tobj.SymbolID==3)
 					    {
+						clears2();
 						g.TranslateTransform(ox, oy);
 						g.RotateTransform((float)(tobj.Angle / Math.PI * 180.0f));
 						g.TranslateTransform(-ox, -oy);
@@ -304,6 +424,7 @@ using TUIO;
 						}
 						else if(tobj.SymbolID==4)
 				        {
+						clears2();
 						g.TranslateTransform(ox, oy);
 						g.RotateTransform((float)(tobj.Angle / Math.PI * 180.0f));
 						g.TranslateTransform(-ox, -oy);
@@ -329,6 +450,7 @@ using TUIO;
 					}
 						else if (tobj.SymbolID == 5)
 						{
+						clears3();
 							g.TranslateTransform(ox, oy);
 							g.RotateTransform((float)(tobj.Angle / Math.PI * 180.0f));
 							g.TranslateTransform(-ox, -oy);
@@ -346,6 +468,7 @@ using TUIO;
 						}
 						else if (tobj.SymbolID == 6)
 						{
+						clears3();
 							g.TranslateTransform(ox, oy);
 							g.RotateTransform((float)(tobj.Angle / Math.PI * 180.0f));
 							g.TranslateTransform(-ox, -oy);
@@ -372,6 +495,7 @@ using TUIO;
 						}
 						else if (tobj.SymbolID == 7)
 						{
+						clears4();
 							g.TranslateTransform(ox, oy);
 							g.RotateTransform((float)(tobj.Angle / Math.PI * 180.0f));
 							g.TranslateTransform(-ox, -oy);
@@ -389,6 +513,7 @@ using TUIO;
 						}
 						else if (tobj.SymbolID == 8)
 						{
+						clears4();
 							g.TranslateTransform(ox, oy);
 							g.RotateTransform((float)(tobj.Angle / Math.PI * 180.0f));
 							g.TranslateTransform(-ox, -oy);
@@ -415,6 +540,7 @@ using TUIO;
 						}
 						else if (tobj.SymbolID == 9)
 						{
+						clears5();
 							g.TranslateTransform(ox, oy);
 							g.RotateTransform((float)(tobj.Angle / Math.PI * 180.0f));
 							g.TranslateTransform(-ox, -oy);
@@ -432,6 +558,7 @@ using TUIO;
 						}
 						else if (tobj.SymbolID == 10)
 						{
+						clears5();
 							g.TranslateTransform(ox, oy);
 							g.RotateTransform((float)(tobj.Angle / Math.PI * 180.0f));
 							g.TranslateTransform(-ox, -oy);
